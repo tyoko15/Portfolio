@@ -1,7 +1,7 @@
 // src/hooks/useTheme.ts
 import { useState, useEffect } from 'react'
 
-export function useTheme() {
+export function useTheme(): { theme: string; toggle: () => void } {
   const [theme, setTheme] = useState(
     () => localStorage.getItem('theme') ?? 'dark'
   )
@@ -14,12 +14,4 @@ export function useTheme() {
   const toggle = () => setTheme((t) => (t === 'dark' ? 'light' : 'dark'))
 
   return { theme, toggle }
-}
-
-// 使うとき
-import { useTheme } from './hooks/useTheme'
-
-function App() {
-  const { theme, toggle } = useTheme()
-  return <button onClick={toggle}>{theme === 'dark' ? '☀️' : '🌙'}</button>
 }
