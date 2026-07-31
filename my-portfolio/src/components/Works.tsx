@@ -1,12 +1,6 @@
 // src/components/Works.tsx
 import { Link } from 'react-router-dom'
 import {
-  FaLocationDot,
-  FaArrowRight,
-  FaGithub,
-  FaArrowUpRightFromSquare,
-} from 'react-icons/fa6'
-import {
   works,
   CATEGORY_ICON,
   CATEGORY_ICON_FALLBACK,
@@ -36,7 +30,7 @@ function WorkCard({ work }: { work: Work }) {
         {work.venues?.length > 0 && (
           <div className="work-venues">
             {work.venues.map((v, i) => (
-              <span key={i} className="work-venue-tag"><FaLocationDot /> {v.name} {v.date}</span>
+              <span key={i} className="work-venue-tag">FaLocationDot {v.name} {v.date}</span>
             ))}
           </div>
         )}
@@ -47,15 +41,15 @@ function WorkCard({ work }: { work: Work }) {
 
         <div className="work-links">
           <Link to={`/works/${work.id}`} className="btn btn-primary work-btn">
-            詳細を見る <FaArrowRight />
+            詳細を見る FaArrowRight
           </Link>
           {work.github && (
             <a href={work.github} className="btn btn-outline work-btn"
-               target="_blank" rel="noreferrer"><FaGithub /> GitHub</a>
+               target="_blank" rel="noreferrer">FaGithub GitHub</a>
           )}
           {work.link && (
             <a href={work.link} className="btn btn-outline work-btn"
-               target="_blank" rel="noreferrer"><FaArrowUpRightFromSquare /> Live Demo</a>
+               target="_blank" rel="noreferrer">FaArrowUpRightFromSquare Live Demo</a>
           )}
         </div>
       </div>

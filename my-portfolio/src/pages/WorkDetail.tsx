@@ -1,7 +1,6 @@
 // src/pages/WorkDetail.tsx
 import { useParams, Link, Navigate } from 'react-router-dom'
 import type { ReactNode } from 'react'
-import { FaArrowLeft } from 'react-icons/fa6'
 import {
   works,
   CATEGORY_ICON,
@@ -40,7 +39,7 @@ export default function WorkDetail() {
   return (
     <div className="wd-page">
       <div className="container">
-        <Link to="/#works" className="wd-back"><FaArrowLeft /> 作品一覧に戻る</Link>
+        <Link to="/#works" className="wd-back">FaArrowLeft 作品一覧に戻る</Link>
 
         <div className="wd-hero">
           <div className="wd-hero-thumbnail">

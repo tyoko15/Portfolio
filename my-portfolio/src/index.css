@@ -1,16 +1,28 @@
-@import './styles/base.css';
-@import './styles/utilities.css';
+/* ===========================
+   styles/ 配下のセクション別CSSを順に読み込む
+   1. 基礎（リセット・CSS変数・body・リンク・画像）
+   2. ユーティリティ（container・section・btn・tag）
+   3. コンポーネント別スタイル（記述順 = 上から表示順）
+   4. レスポンシブ共通（最後に置いてオーバーライド）
+   =========================== */
 
-@import './styles/header.css';
-@import './styles/hero.css';
-@import './styles/about.css';
-@import './styles/skills.css';
-@import './styles/works.css';
-@import './styles/gamejams.css';
-@import './styles/certifications.css';
-@import './styles/contact.css';
-@import './styles/footer.css';
+/* ===========================
+   styles/ 配下のセクション別CSSを順に読み込む
+   =========================== */
 
-@import './styles/work-detail.css';
+@import 'src/styles/base.css';
+@import 'src/styles/utilities.css';
 
-@import './styles/responsive.css';
+@import 'src/styles/header.css';
+@import 'src/styles/hero.css';
+@import 'src/styles/about.css';
+@import 'src/styles/skills.css';
+@import 'src/styles/works.css';
+@import 'src/styles/gamejams.css';
+@import 'src/styles/certifications.css';
+@import 'src/styles/contact.css';
+@import 'src/styles/footer.css';
+
+@import 'src/styles/work-detail.css';
+
+@import 'src/styles/responsive.css';

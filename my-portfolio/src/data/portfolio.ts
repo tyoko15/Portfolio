@@ -81,144 +81,97 @@ export interface TimelineItem {
   event: string
 }
 
-// ==================================================
-// 実体データ（コンポーネントに渡して表示するデータ）
-// ==================================================
-
 export const profile: Profile = {
-  name: "山田 太郎",
-  nameEn: "Taro Yamada",
-  role: "フロントエンドエンジニア志望",
-  school: "〇〇大学",
-  department: "情報工学科",
-  graduationYear: "2026年卒業予定",
-  bio: "Web開発を中心に勉強している情報系の学生です。ユーザーが使いやすいデザインと、パフォーマンスの高いコードを書くことを心がけています。",
-  motto: "継続は力なり",
-  avatar: null, // 画像がある場合は "/images/avatar.jpg" などのパスを指定
+  name: '山田 太郎',           // 漢字表記
+  nameEn: 'Taro Yamada',      // ローマ字（Hero で使う）
+  role: 'Game Creator / Web Developer',
+  school: '◯◯専門学校',
+  department: 'ゲームクリエイター科',
+  graduationYear: '2027年3月卒業見込み',
+  bio: '自己紹介文（100〜150字程度）',
+  motto: '信頼は、積むもの',   // 座右の銘（Hero のキャッチコピーに使う）
+  avatar: null,               // 画像パス or null
   links: {
-    github: "https://github.com/",
-    twitter: null,
-    email: "example@email.com",
+    github: 'https://github.com/あなたのID',
+    twitter: 'https://twitter.com/あなたのID',
+    email: 'あなた@example.com',
   },
 }
 
 export const skills: Skill[] = [
   {
-    name: "React",
-    version: "18.x",
-    level: 80,
-    category: "Frontend",
-    capabilities: ["Hooks", "TypeScript", "Vite"],
-    note: "個人開発のポートフォリオや課題制作で使用",
+    name: 'Unity',
+    version: '2022.3 LTS',
+    level: 80,            // 0〜100（後述）
+    category: 'game',    // フィルター用カテゴリ
+    capabilities: ['3D/2Dゲーム開発', 'Physics演算', 'ProceduralGeneration'],
+    note: 'プロシージャル迷宮生成・A*経路探索を実装済み',
   },
-  {
-    name: "TypeScript",
-    version: "5.x",
-    level: 75,
-    category: "Frontend",
-    capabilities: ["型安全なコーディング", "インターフェース設計"],
-    note: "Reactと組み合わせて常用",
-  },
-  {
-    name: "HTML / CSS",
-    version: "5 / 3",
-    level: 85,
-    category: "Frontend",
-    capabilities: ["レスポンシブ対応", "Flexbox / Grid"],
-    note: "基本的なUIコンポーネントの作成が可能",
-  },
+  // ...続きを追加
 ]
 
 export const works: Work[] = [
   {
-    id: 1,
-    title: "ポートフォリオサイト",
-    genre: "Webアプリケーション",
-    category: "Frontend",
-    thumbnail: null,
-    screenshots: [],
-    description: "React + TypeScript + Vite を使用して作成した自己紹介用ポートフォリオサイトです。",
-    tags: ["React", "TypeScript", "Vite", "TailwindCSS"],
-    platform: ["Web Browser"],
-    period: "2026年4月 - 2026年5月",
-    team: "個人開発",
-    role: "企画 / 設計 / 実装",
-    github: "https://github.com/",
-    link: "http://localhost:5173/",
-    venues: [
-      {
-        name: "学内発表会",
-        date: "2026年5月",
-      },
+    id: 1,                              // 連番（詳細ページのURLに使う）
+    title: '迷宮脱出ゲーム',
+    genre: '3Dパズルアクション',
+    category: 'game',
+    thumbnail: null,                    // '/images/work1.png' or null
+    screenshots: [],                    // ['/images/w1-1.png', '/images/w1-2.gif']
+    description: '作品の概要説明...',
+    tags: ['Unity', 'C#', 'ProceduralGeneration'],
+    platform: ['Windows', 'WebGL'],
+    period: '2025年10月〜2026年1月（3ヶ月）',
+    team: '個人制作',
+    role: 'プログラマー / レベルデザイナー（全工程）',
+    github: 'https://github.com/username/repo',
+    link: null,                         // 公開URLがある場合
+    venues: [                           // 出展・公開先（複数可）
+      { name: '学校 卒業制作展示会', date: '2026年2月' },
     ],
-    techPoints: "Viteによる高速な開発環境構築と、TypeScriptによる型安全な開発を意識しました。",
-    designNotes: "シンプルで視認性の高いUIデザインを追求しました。",
-    implementationTheme: "コンポーネントの再利用性と可読性の向上",
-    troubleshooting: "データの型定義エラーが発生した際、interfaceを見直して解決しました。",
-    performance: "Lighthouseでのスコア最適化を実施",
+    techPoints: 'こだわった技術ポイント...',
+    designNotes: '設計上の工夫...',
+    implementationTheme: '実装解説テーマ（1文）',
+    troubleshooting: '詰まった問題と解決策...',
+    performance: 'パフォーマンス改善の工夫...',
   },
 ]
 
 export const gameJams: GameJam[] = [
   {
-    name: "学内ハッカソン 2025",
-    date: "2025年12月",
-    theme: "つながり",
-    description: "チームでWebベースの簡単なオンラインマルチ対戦ゲームを作成しました。",
-    platform: ["Web Browser"],
-    role: "フロントエンド開発・UIデザイン",
-    team: "4人チーム",
-    result: "優秀賞",
-    url: null,
-    reflection: "短時間でのプロトタイピングとチーム開発でのGit運用の難しさと重要性を学びました。",
+    name: 'Global Game Jam 2025',
+    date: '2025年1月（48時間制作）',
+    theme: '「Bubble」→ 泡を使った物理パズルを制作',
+    description: '作品の説明...',
+    platform: ['WebGL', 'Windows'],
+    role: 'プログラマー（物理演算・ステージ生成担当）',
+    team: '4名（PG×2・デザイナー×1・サウンド×1）',
+    result: null,                       // '総合2位' など、なければ null
+    url: 'https://itch.io/...',         // なければ null
+    reflection: '学び・振り返り...',
   },
 ]
 
 export const certifications: Certification[] = [
   {
-    name: "基本情報技術者試験",
-    date: "2025年4月",
-    category: "国家資格",
-    score: null,
-    status: "取得済み",
-  },
-  {
-    name: "応用情報技術者試験",
-    date: "2026年10月",
-    category: "国家資格",
-    score: null,
-    status: "学習中",
+    name: 'ITパスポート',
+    date: '2024年10月合格',
+    category: '国家資格',
+    score: '665点',                     // なければ null
+    status: '取得済み',                 // '取得済み' | '受験予定' | '取得予定' | '学習中'
   },
 ]
 
 export const timeline: TimelineItem[] = [
-  {
-    year: "2023年4月",
-    event: "大学に入学",
-  },
-  {
-    year: "2024年8月",
-    event: "プログラミング学習を開始（HTML/CSS/JavaScript）",
-  },
-  {
-    year: "2025年3月",
-    event: "ReactおよびTypeScriptの学習を開始",
-  },
-  {
-    year: "2026年5月",
-    event: "ポートフォリオサイトの制作",
-  },
+  { year: '2024年4月', event: '◯◯専門学校 ゲームクリエイター科 入学' },
+  { year: '2024年7月', event: 'Unity基礎習得・初めてのゲーム完成' },
+  // ...
 ]
 
-// カテゴリに対応するアイコン名のマッピング定義
 export const CATEGORY_ICON: Record<string, string> = {
-  All: 'LayoutGrid',
-  Frontend: 'Code',
-  Backend: 'Server',
-  Mobile: 'Smartphone',
-  Game: 'Gamepad2',
-  Other: 'Folder',
+  game: 'G',
+  web: 'W',
+  '3d': 'D',
 }
 
-// フォールバック用のデフォルトアイコン名
-export const CATEGORY_ICON_FALLBACK = 'Folder'
+export const CATEGORY_ICON_FALLBACK = 'FaFolder'

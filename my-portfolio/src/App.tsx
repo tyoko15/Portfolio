@@ -1,17 +1,16 @@
 // src/App.tsx
 import { Routes, Route } from 'react-router-dom'
 import { useTheme } from './hooks/useTheme'
-import ScrollToTop from './components/ScrollToTop'
-import Header from './components/Header'
-import Footer from './components/Footer'
-import Hero from './components/Hero'
-import About from './components/About'
-import Skills from './components/Skills'
-import Works from './components/Works'
-import GameJams from './components/GameJams'
-import Certifications from './components/Certifications'
-import Contact from './components/Contact'
-import WorkDetail from './pages/WorkDetail'
+import ScrollToTop from './components/ScrollToTop.tsx'
+import Header from './components/Header.tsx'
+import Footer from './components/Footer.tsx'
+import Hero from './components/Hero.tsx'
+import About from './components/About.tsx'
+import Skills from './components/Skills.tsx'
+import Works from './components/Works.tsx'
+import Certifications from './components/Certifications.tsx'
+import Contact from './components/Contact.tsx'
+import WorkDetail from './pages/WorkDetail.tsx'
 
 function HomePage() {
   return (
@@ -20,7 +19,6 @@ function HomePage() {
       <About />
       <Skills />
       <Works />
-      <GameJams />
       <Certifications />
       <Contact />
     </>

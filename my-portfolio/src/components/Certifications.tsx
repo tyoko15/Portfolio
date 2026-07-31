@@ -1,9 +1,4 @@
 // src/components/Certifications.tsx
-import type { IconType } from 'react-icons'
-import {
-  FaLandmark, FaIdCard, FaMedal, FaBolt,
-  FaFlag, FaDesktop, FaBookOpen, FaClipboard,
-} from 'react-icons/fa6'
 import { certifications, type Certification, type CertStatus } from '../data/portfolio'
 
 // ステータスごとの色設定（オブジェクトでまとめて管理）
@@ -15,11 +10,11 @@ const STATUS_CONFIG: Record<CertStatus, { color: string; bg: string; border: str
 }
 
 // カテゴリごとのアイコン（react-icons コンポーネント）
-const CATEGORY_ICONS: Record<string, IconType> = {
-  '国家資格':     FaLandmark,
-  '免許':         FaIdCard,
-  'ベンダー認定': FaMedal,
-  '競プロ':       FaBolt,
+const CATEGORY_ICONS: Record<string, string> = {
+  '国家資格':     'FaLandmark',
+  '免許':         'FaIdCard',
+  'ベンダー認定': 'FaMedal',
+  '競プロ':       'FaBolt',
   // 'CTF': FaFlag, 'ISUCON': FaDesktop, '学習中': FaBookOpen ...
 }
 
@@ -40,7 +35,7 @@ function CertRow({ cert }: { cert: Certification }) {
     <div className="cert-row">
       <div className="cert-icon">
         {(() => {
-          const Icon = CATEGORY_ICONS[cert.category] ?? FaClipboard
+          const Icon = CATEGORY_ICONS[cert.category] ?? 'FaClipboard'
           return <Icon />
         })()}
       </div>
