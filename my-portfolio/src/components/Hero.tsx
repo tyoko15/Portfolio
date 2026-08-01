@@ -1,5 +1,5 @@
 // src/components/Hero.tsx
-import { FaArrowRight } from 'react-icons/fa6'
+// import { FaArrowRight } from 'react-icons/fa6'
 import { profile } from '../data/portfolio'
 import SafeImg from './SafeImg'
 
@@ -14,7 +14,7 @@ export default function Hero() {
             fallback={profile.nameEn.charAt(0)}
           />
         </div>
-        
+
         <p className="hero-eyebrow">Portfolio</p>
 
         <h1 className="hero-name">
