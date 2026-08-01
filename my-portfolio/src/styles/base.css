@@ -14,14 +14,14 @@
    :root に定義した変数はページ全体で使える
    =========================== */
 :root {
-  --color-bg: #0d0d14;         /* ページ背景色 */
-  --color-surface: #16161f;    /* カード・セクションの背景色 */
-  --color-surface-2: #1e1e2e;  /* カード内の入れ子要素などの背景色 */
-  --color-border: #2a2a3d;     /* ボーダー・区切り線の色 */
-  --color-accent: #7c6af7;     /* メインアクセントカラー（紫） */
-  --color-accent-2: #f76ac8;   /* サブアクセントカラー（ピンク） */
+  --color-bg: #485f72;         /* ページ背景色 */
+  --color-surface: #1b272e;    /* カード・セクションの背景色 */
+  --color-surface-2: #1e2731;  /* カード内の入れ子要素などの背景色 */
+  --color-border: #007602;     /* ボーダー・区切り線の色 */
+  --color-accent: #04b922;     /* メインアクセントカラー（紫） */
+  --color-accent-2: #3b8650;   /* サブアクセントカラー（ピンク） */
   --color-text: #e8e8f0;       /* 本文テキストの色 */
-  --color-text-muted: #8888aa; /* 補足テキスト・ラベルなど薄い文字色 */
+  --color-text-muted: #47c85a; /* 補足テキスト・ラベルなど薄い文字色 */
   --font-en: 'Space Grotesk', sans-serif; /* 英字フォント */
   --font-ja: 'Noto Sans JP', sans-serif;  /* 日本語フォント */
   --radius: 12px;              /* カードなどの角丸の大きさ */
@@ -33,14 +33,14 @@
    data-theme="light" が <html> に付いたとき上書きされる
    =========================== */
 [data-theme="light"] {
-  --color-bg: #f4f4f8;
-  --color-surface: #ffffff;
+  --color-bg: #fcf5ed;
+  --color-surface: #fbf9f9;
   --color-surface-2: #ebebf3;
   --color-border: #d8d8e8;
-  --color-accent: #6a58e8;
-  --color-accent-2: #e855b4;
-  --color-text: #1a1a2e;
-  --color-text-muted: #666680;
+  --color-accent: #285b24;
+  --color-accent-2: #55e87f;
+  --color-text: #2e221a;
+  --color-text-muted: #807366;
 }
 
 /* ライトテーマ時のヘッダー背景（半透明白） */

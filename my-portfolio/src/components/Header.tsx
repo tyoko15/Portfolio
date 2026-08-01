@@ -12,7 +12,6 @@ export default function Header({ theme, onThemeToggle }: Props) {
     { label: 'About', hash: 'about' },
     { label: 'Skills', hash: 'skills' },
     { label: 'Works', hash: 'works' },
-    { label: 'Jams', hash: 'gamejams' },
     { label: 'Certs', hash: 'certifications' },
     { label: 'Contact', hash: 'contact' },
   ]
