@@ -1,36 +1,44 @@
-import { Routes, Route } from "react-router-dom";
+// src/App.tsx
+import { Routes, Route } from 'react-router-dom'
+import { useTheme } from './hooks/useTheme'
+import ScrollToTop from './components/ScrollToTop.tsx'
+import Header from './components/Header.tsx'
+import Footer from './components/Footer.tsx'
+import Hero from './components/Hero.tsx'
+import About from './components/About.tsx'
+import Skills from './components/Skills.tsx'
+import Works from './components/Works.tsx'
+import Certifications from './components/Certifications.tsx'
+import Contact from './components/Contact.tsx'
+import WorkDetail from './pages/WorkDetail.tsx'
 
-import Home from "./pages/Home";
-import About from "./pages/About";
-import Skills from "./pages/Skills";
-import Works from "./pages/Works";
-import GameJams from "./pages/GameJams";
-import Certifications from "./pages/Certifications";
-import Contact from "./pages/Contact";
-import WorkDetail from "./pages/WorkDetail";
-
-import Footer from "./components/Footer";
-import Header from "./components/Header";
-
-export default function App() {
+function HomePage() {
   return (
     <>
-      <Header />
+      <Hero />
+      <About />
+      <Skills />
+      <Works />
+      <Certifications />
+      <Contact />
+    </>
+  )
+}
 
-      <main style={{ flex: 1 }}>
+export default function App() {
+  const { theme, toggle } = useTheme()
+
+  return (
+    <>
+      <ScrollToTop />
+      <Header theme={theme} onThemeToggle={toggle} />
+      <main>
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/skills" element={<Skills />} />
-          <Route path="/works" element={<Works />} />
-          <Route path="/gamejams" element={<GameJams />} />
-          <Route path="/certifications" element={<Certifications />} />
-          <Route path="/contact" element={<Contact />} />
+          <Route path="/" element={<HomePage />} />
           <Route path="/works/:id" element={<WorkDetail />} />
         </Routes>
       </main>
-
       <Footer />
     </>
-  );
+  )
 }
