@@ -77,6 +77,7 @@
   color: var(--color-text-muted);
   line-height: 1.7;
   margin-bottom: 16px;
+  white-space: pre-line; 
 }
 
 /* 期間・役割などのメタ情報 */
@@ -100,6 +101,7 @@
   font-size: 0.82rem;
   color: var(--color-accent-2);
   margin-top: 12px;
+  white-space: pre-line; 
 }
 
 /* ハイライトの左側の星マーク */

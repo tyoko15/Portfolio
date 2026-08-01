@@ -7,6 +7,9 @@ const CATEGORY_LABELS: Record<string, string> = {
   game: 'ゲーム',
   web: 'Web',
   language: '言語',
+  plan: '企画',
+  management: '管理',
+  design: 'デザイン',
   // ...
 }
 

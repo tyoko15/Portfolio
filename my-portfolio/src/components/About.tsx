@@ -23,6 +23,10 @@ export default function About() {
                 <dd>{profile.department}</dd>
               </div>
               <div className="profile-school-row">
+                <dt>専攻</dt>
+                <dd>{profile.major}</dd>
+              </div>
+              <div className="profile-school-row">
                 <dt>卒業</dt>
                 <dd className="profile-graduation">{profile.graduationYear}</dd>
               </div>

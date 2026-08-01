@@ -34,6 +34,7 @@
   line-height: 1.9;
   color: var(--color-text-muted);
   margin-bottom: 24px;
+  white-space: pre-line; 
 }
 
 /* 学校情報エリア（カード内区切り） */
@@ -75,6 +76,7 @@
   list-style: none;
   position: relative;
   padding-left: 20px;
+  white-space: pre-line; 
 }
 
 /* タイムラインの縦線 */

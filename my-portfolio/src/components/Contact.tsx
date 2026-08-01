@@ -4,7 +4,6 @@ import { profile } from '../data/portfolio'
 export default function Contact() {
   const link = [
     { label: 'GitHub',      icon: 'FaGithub' ,   href: profile.links.github },
-    { label: 'Twitter / X', icon: 'FaXTwitter' , href: profile.links.twitter },
     { label: 'Email',       icon: 'FaEnvelope' , href: `mailto:${profile.links.email}` },
   ]
 
