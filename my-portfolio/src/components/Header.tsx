@@ -1,6 +1,7 @@
 // src/components/Header.tsx
 import { Link } from 'react-router-dom'
 import { profile } from '../data/portfolio'
+import { FaSun, FaMoon } from 'react-icons/fa6'
 
 interface Props {
   theme: string
@@ -39,7 +40,7 @@ export default function Header({ theme, onThemeToggle }: Props) {
             onClick={onThemeToggle}
             aria-label={theme === 'dark' ? 'ライトモードに切替' : 'ダークモードに切替'}
           >
-            {theme === 'dark' ? 'FaSun'  : 'FaMoon' }
+            {theme === 'dark' ? <FaSun/>  : <FaMoon/> }
           </button>
         </div>
       </div>
