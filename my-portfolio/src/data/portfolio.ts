@@ -178,7 +178,7 @@ export const works: Work[] = [
     category: 'game',
     thumbnail: '/images/DarkMaze_image1.png',                    // '/images/work1.png' or null
     screenshots: [],                    // ['/images/w1-1.png', '/images/w1-2.gif']
-    description: '作品の概要説明...',
+    description: '暗闇の中を手探りで進む、謎解きアクション ゲームです。\n4分割されたステージに仕掛けられたギミックを解き明かし、ゴールを目指します。\n',
     tags: ['Unity', 'C#', 'ProceduralGeneration'],
     platform: ['Windows', 'WebGL'],
     period: '2025年5月〜2026年2月（10ヶ月）',
@@ -203,9 +203,9 @@ export const works: Work[] = [
     category: 'game',
     thumbnail: '/images/Senrinkagura_image1.png',                    // '/images/work1.png' or null
     screenshots: [],                    // ['/images/w1-1.png', '/images/w1-2.gif']
-    description: '作品の概要説明...',
+    description: '変幻自在の『戦輪（チャクラム）』を操り、妖しげな寺院をチャクラムを使って舞うように攻略する和風3Dアクション',
     tags: ['Unity', 'C#', 'ProceduralGeneration'],
-    platform: ['Windows', 'WebGL'],
+    platform: ['Windows'],
     period: '2025年10月〜2026年1月（3ヶ月）',
     team: 'チーム制作 (15名)',
     role: '全Enemyの実装',
@@ -254,8 +254,15 @@ export const certifications: Certification[] = [
 ]
 
 export const timeline: TimelineItem[] = [
-  { year: '2024年4月', event: '京都デザイン&テクノロジー専門学校\n スーパーAI&テクノロジー科\n スーパーゲームクリエイター専攻\n 入学' },
-  { year: '2024年7月', event: 'Unity基礎習得・初めてのゲーム完成' },
+  { year: '2023年4月', event: '京都デザイン&テクノロジー専門学校\n スーパーAI&テクノロジー科\n スーパーゲームクリエイター専攻\n 入学' },
+  { year: '2023年5月~12月', event: 'プランニング・デザイン・プログラミングの基礎を学習' },
+  { year: '2024年2月', event: '初めてのチーム制作 プログラマーリーダーとして2Dパズルゲーム「ツミキの旅」を制作' },
+  { year: '2024年8月', event: 'チーム制作 Enemy実装プログラマー&デザイナーとして3Dステルスゲーム「Hide」を制作' },
+  { year: '2025年2月', event: 'チーム制作 ゲームフロー実装プログラマーとして3Dストラテジーゲーム「勇魔伝」を制作' },
+  { year: '2025年5月', event: 'チーム制作 プログラマーリーダーとして3Dストラテジーゲーム「TridentGrowthDuel」を制作' },
+  { year: '2026年1月', event: 'チーム制作 Enemy実装プログラマーとして3Dアクションゲーム「戦輪神楽」を制作' },
+  { year: '2026年2月', event: '個人制作 3D謎解きアクションゲーム「DarkMaze」を制作' },
+  { year: '2027年3月', event: '京都デザイン&テクノロジー専門学校\n 卒業見込み' },
   // ...
 ]
 

@@ -17,9 +17,9 @@
   --color-bg: #485f72;         /* ページ背景色 */
   --color-surface: #1b272e;    /* カード・セクションの背景色 */
   --color-surface-2: #1e2731;  /* カード内の入れ子要素などの背景色 */
-  --color-border: #007602;     /* ボーダー・区切り線の色 */
+  --color-border: #a3b6a3;     /* ボーダー・区切り線の色 */
   --color-accent: #04b922;     /* メインアクセントカラー（紫） */
-  --color-accent-2: #3b8650;   /* サブアクセントカラー（ピンク） */
+  --color-accent-2: #13632a;   /* サブアクセントカラー（ピンク） */
   --color-text: #e8e8f0;       /* 本文テキストの色 */
   --color-text-muted: #47c85a; /* 補足テキスト・ラベルなど薄い文字色 */
   --font-en: 'Space Grotesk', sans-serif; /* 英字フォント */
